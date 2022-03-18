@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>Blue10.Cloud.Connector.nuspec</id>
+    <version>0.1.0</version>
+    <description>
+      Project template for creating a self-updating .NET Core ClickOnce WPF application.
+    </description>
+    <authors>Blue-10</authors>
+    <license type="expression">MIT</license>
+    <packageTypes>
+      <packageType name="Template" />
+    </packageTypes>
+  </metadata> 
+</package>
