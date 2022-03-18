@@ -24,4 +24,4 @@ jobs:
       run: dotnet pack CloudConnectorTemplate --configuration Release 
 
     - name: Push to Nuget
-      run: dotnet nuget push **/bin/Release/*.nupkg -s https://www.nuget.org/ -k ${{ secrets.NUGET_KEY }} --skip-duplicate
+      run: dotnet nuget push **/bin/Release/*.nupkg -s https://www.nuget.org/ -k ${{ secrets.NUGET_KEY }} --skip-duplicate 
