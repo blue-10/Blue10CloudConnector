@@ -1,0 +1,44 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "Blue-10",
+  "classifications": ["Desktop","Solution"],
+  "name": "Blue10 Cloud Connector Template",
+  "shortName": "blue10.cloud.connector",
+  "defaultName": "MyCloudConnector",
+  "identity": "blue10.cloud.connector.01",
+  "tags": {
+    "language": "C#",
+    "type": "solution"
+  },
+  "sourceName": "CloudConnectorTemplate",
+  "symbols": {
+    "storageEndpoint": {
+      "type": "parameter",
+      "description": "Sets the endpoint where the application is deployed",
+      "datatype": "string",
+      "replaces": "storage-endpoint",
+      "defaultValue": "localhost"
+    },
+    "apiEndpoint": {
+      "type": "parameter",
+      "description": "Sets the endpoint to which the HttpClient connects.",
+      "datatype": "string",
+      "replaces": "api-endpoint",
+      "defaultValue": "localhost"
+    },
+    "productName": {
+      "type": "parameter",
+      "description": "Sets the application name needed for ClickOnce deployment.",
+      "datatype": "string",
+      "replaces": "product-name",
+      "defaultValue": "My Cloud Connector"
+    },
+    "publisherName": {
+      "type": "parameter",
+      "description": "Sets the application publisher name needed for ClickOnce deployment.",
+      "datatype": "string",
+      "replaces": "publisher-name",
+      "defaultValue": "John Doe"
+    }
+  }
+}

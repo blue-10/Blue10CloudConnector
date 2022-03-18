@@ -1,0 +1,27 @@
+name: .NET
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - '.github/workflows/**'
+      - '**.csproj'
+      - 'templates/**'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 6.0.x
+      
+    - name: Pack with dotnet
+      run: dotnet pack ./CloudConnectorTemplate --configuration Release    
+
+    - name: Push to Nuget
+      run: dotnet nuget push ./CloudConnectorTemplate/CloudConnectorTemplate/bin/Release/*.nupkg -s https://www.nuget.org/ -k ${{ secrets.NUGET_KEY }} --skip-duplicate

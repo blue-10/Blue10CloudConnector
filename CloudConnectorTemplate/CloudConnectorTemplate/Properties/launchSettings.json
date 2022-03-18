@@ -1,0 +1,7 @@
+{
+  "profiles": {
+    "CloudConnectorTemplate": {
+      "commandName": "Project"
+    }
+  }
+}
