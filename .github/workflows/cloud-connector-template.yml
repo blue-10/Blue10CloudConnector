@@ -23,4 +23,4 @@ jobs:
       run: dotnet pack cloud-connector-template.csproj --configuration Release 
 
     - name: Push to Nuget
-      run: dotnet nuget push **/bin/Release/*.nupkg -s https://www.nuget.org/ -k ${{ secrets.NUGET_KEY }} --skip-duplicate 
+      run: dotnet nuget push **/bin/Release/Blue10.Templates.Cloud.Connector.*.nupkg -s https://www.nuget.org/ -k ${{ secrets.NUGET_KEY }} --skip-duplicate 
