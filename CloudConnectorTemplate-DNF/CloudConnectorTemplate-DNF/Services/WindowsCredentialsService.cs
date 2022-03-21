@@ -1,9 +1,9 @@
-using CloudConnectorTemplate.Interface;
+using CloudConnectorTemplate_DNF.Interface;
 using CredentialManagement;
 
-namespace CloudConnectorTemplate.Services
+namespace CloudConnectorTemplate_DNF.Services
 {
-    public class WindowsCredentialService : IWindowsCredentialsService
+    public class WindowsCredentialService : IAuthenticationService
     {
         internal const string API_KEY_TARGET = "ApiKey";
 
@@ -14,14 +14,14 @@ namespace CloudConnectorTemplate.Services
             return new ApiCredentialsService(fCm.Password);
         }
 
-        private bool SetCredentials(string pTarget, string pUsername, string pPassword, PersistanceType pPersistenceType)
+        private bool SetCredentials(string pTarget, string pUsername, string pPAssword, PersistanceType pPErsistenceType)
         {
             return new Credential
             {
                 Target = pTarget,
                 Username = pUsername,
-                Password = pPassword,
-                PersistanceType = pPersistenceType
+                Password = pPAssword,
+                PersistanceType = pPErsistenceType
             }.Save();
         }
 

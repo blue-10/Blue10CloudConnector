@@ -10,20 +10,20 @@
     <PackageProjectUrl>https://github.com/blue-10/Blue10CloudConnector</PackageProjectUrl>
     <RepositoryUrl>https://github.com/blue-10/Blue10CloudConnector</RepositoryUrl>
 
-    <PackageId>Blue10.Templates.Cloud.Connector</PackageId>
+    <PackageId>Blue10.Templates.Cloud.Connector.DNF</PackageId>
     <Title>Blue10 Cloud Connector Template</Title>
-    <Author>Blue10</Author>
-    <Description>Template for a .NET 6 Cloud Connector using ClickOnce and WPF</Description>
+    <Author>Blue-10</Author>
+    <Description>Template for a .NET Framework 4.8 Cloud Connector using ClickOnce and WPF</Description>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <PackageTags>dotnet-new;templates;di;dependency-injection;</PackageTags>
-    <TargetFramework>net6.0</TargetFramework>
+    <TargetFramework>net48</TargetFramework>
     <IncludeContentInPack>true</IncludeContentInPack>
     <IncludeBuildOutput>false</IncludeBuildOutput>	
     <ContentTargetFolders>content</ContentTargetFolders>
   </PropertyGroup>
 
   <ItemGroup>
-	  <Content Include="CloudConnectorTemplate\**\*" Exclude="CloudConnectorTemplate\**\bin\**;CloudConnectorTemplate\**\obj\**" />
+	  <Content Include="CloudConnectorTemplate-DNF\**\*" Exclude="CloudConnectorTemplate-DNF\**\bin\**;CloudConnectorTemplate-DNF\**\obj\**" />
 	  <Compile Remove="**\*" />
 
     <None Include="README.md" Pack="true" PackagePath="" />
