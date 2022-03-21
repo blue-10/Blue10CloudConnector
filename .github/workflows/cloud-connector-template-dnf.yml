@@ -6,6 +6,7 @@ on:
     paths:
       - '.github/workflows/cloud-connector-template-dnf.yml'
       - 'CloudConnectorTemplate-DNF/**'
+      - '**/CloudConnectorTemplate-DNF.csproj'
 
 jobs:
   build:

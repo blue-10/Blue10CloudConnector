@@ -6,6 +6,7 @@ on:
     paths:
       - '.github/workflows/cloud-connector-template.yml'
       - 'CloudConnectorTemplate/**'
+      - '**/CloudConnectorTemplate.csproj'
 
 jobs:
   build:
