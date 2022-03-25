@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>	  
+    <PackageType>Template</PackageType>
+    <PackageVersion>0.1.0</PackageVersion>
+
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+
+    <PackageProjectUrl>https://github.com/blue-10/Blue10CloudConnector</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/blue-10/Blue10CloudConnector</RepositoryUrl>
+
+    <PackageId>Blue10.Templates.Windows.Service.DNF</PackageId>
+    <Title>Blue10 Windows Service Template</Title>
+    <Author>Blue-10</Author>
+    <Description>Template for a .NET Framework Windows Service that auto-updates</Description>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <PackageTags>dotnet-new;templates;di;dependency-injection;</PackageTags>
+    <TargetFramework>net472</TargetFramework>
+    <IncludeContentInPack>true</IncludeContentInPack>
+    <IncludeBuildOutput>false</IncludeBuildOutput>	
+    <ContentTargetFolders>content</ContentTargetFolders>
+  </PropertyGroup>
+
+  <ItemGroup>
+	  <Content Include="WindowsServiceFrame\**\*" Exclude="WindowsServiceFramework\**\bin\**;WindowsServiceFramework\**\obj\**" />
+	  <Compile Remove="**\*" />
+
+    <None Include="LICENSE" Pack="true" PackagePath="" />
+  </ItemGroup>
+
+</Project>

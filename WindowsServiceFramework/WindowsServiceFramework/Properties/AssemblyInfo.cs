@@ -1,0 +1,6 @@
+[assembly: System.Reflection.AssemblyTitle("BuildTest")]
+          [assembly: System.Reflection.AssemblyProduct("BuildTest")]
+          [assembly: System.Reflection.AssemblyCopyright("Copyright ©  2022")]
+          [assembly: System.Runtime.InteropServices.ComVisible(false)]
+          [assembly: System.Runtime.InteropServices.Guid("53866ed9-0deb-4479-9137-3012e4a58bb0")]
+          [assembly: System.Reflection.AssemblyVersion("1.0.0.0")]
