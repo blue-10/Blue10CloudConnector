@@ -21,7 +21,7 @@ jobs:
         dotnet-version: 6.0.x
       
     - name: Pack with dotnet
-      run: dotnet pack windows-service-core.csproj --configuration Release 
+      run: dotnet pack windows-service-core-template.csproj --configuration Release 
 
     - name: Push to Nuget
       run: dotnet nuget push **/bin/Release/Blue10.Templates.Windows.Service.*.nupkg -s https://www.nuget.org/ -k ${{ secrets.NUGET_KEY }} --skip-duplicate 
