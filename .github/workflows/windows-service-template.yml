@@ -1,0 +1,27 @@
+name: .NET
+
+on:
+  push:
+    branches: [ master ]
+    paths:
+      - '.github/workflows/cloud-connector-template.yml'
+      - 'CloudConnectorTemplate/**'
+      - '**/CloudConnectorTemplate.csproj'
+
+jobs:
+  build:
+    runs-on: windows-2022
+
+    steps:
+    - uses: actions/checkout@v2
+    
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 6.0.x
+      
+    - name: Pack with dotnet
+      run: dotnet pack windows-service-core.csproj --configuration Release 
+
+    - name: Push to Nuget
+      run: dotnet nuget push **/bin/Release/Blue10.Templates.Windows.Service.*.nupkg -s https://www.nuget.org/ -k ${{ secrets.NUGET_KEY }} --skip-duplicate 

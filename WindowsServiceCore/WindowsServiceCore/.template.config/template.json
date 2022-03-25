@@ -1,0 +1,23 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "Blue-10",
+  "classifications": ["Desktop","Solution"],
+  "name": "Blue10 Windows Service Template",
+  "shortName": "blue10.windows.service",
+  "defaultName": "MyWindowsService",
+  "identity": "blue10.windows.service.01",
+  "tags": {
+    "language": "C#",
+    "type": "solution"
+  },
+  "sourceName": "WindowsServiceCore",
+  "symbols": {
+    "storageEndpoint": {
+      "type": "parameter",
+      "description": "Sets the endpoint from which the http client downloads updates.",
+      "datatype": "string",
+      "replaces": "storage-endpoint",
+      "defaultValue": "http://localhost"
+    }
+  }
+}
