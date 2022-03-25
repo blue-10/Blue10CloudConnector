@@ -4,9 +4,9 @@ on:
   push:
     branches: [ master ]
     paths:
-      - '.github/workflows/cloud-connector-template.yml'
-      - 'CloudConnectorTemplate/**'
-      - '**/CloudConnectorTemplate.csproj'
+      - '.github/workflows/windows-service-template.yml'
+      - 'windows-service-core-template.csproj'
+      - 'WindowsServiceCore/**'
 
 jobs:
   build:
