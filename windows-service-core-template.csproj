@@ -2,10 +2,9 @@
 
   <PropertyGroup>	  
     <PackageType>Template</PackageType>
-    <PackageVersion>0.1.0</PackageVersion>
+    <PackageVersion>0.1.1</PackageVersion>
 
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
-    <PackageReadmeFile>README.md</PackageReadmeFile>
 
     <PackageProjectUrl>https://github.com/blue-10/Blue10CloudConnector</PackageProjectUrl>
     <RepositoryUrl>https://github.com/blue-10/Blue10CloudConnector</RepositoryUrl>
@@ -26,7 +25,6 @@
 	  <Content Include="WindowsServiceCore\**\*" Exclude="WindowsServiceCore\**\bin\**;WindowsServiceCore\**\obj\**" />
 	  <Compile Remove="**\*" />
 
-    <None Include="README.md" Pack="true" PackagePath="" />
     <None Include="LICENSE" Pack="true" PackagePath="" />
   </ItemGroup>
 
