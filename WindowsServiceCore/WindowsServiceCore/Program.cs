@@ -30,7 +30,7 @@ namespace WindowsServiceCore
                     pService.WhenStopped(p => p.Stop());
                 });
 
-                p.SetServiceName("CloudConnectorService");
+                p.SetServiceName("WindowsServiceCore");
             });
         }
     }
