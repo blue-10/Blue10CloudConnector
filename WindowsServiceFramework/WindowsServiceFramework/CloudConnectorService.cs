@@ -23,6 +23,8 @@ namespace WindowsServiceFramework
         private const string VERSION_FILE = "versions.json";
         private const string DEBUG_FILE = "debug.txt";
 
+        private readonly bool CheckingForUpdates = false;
+
         public CloudConnectorService(IBlobService pDownloadClient) =>
             mBlobService = pDownloadClient;
 
@@ -32,15 +34,21 @@ namespace WindowsServiceFramework
             var fTimer = new System.Timers.Timer(60000);
             fTimer.Elapsed += async (object pSender, ElapsedEventArgs pE) =>
             {
-                //Check for update
-                if (!await HasUpdate()) return;
-
-                Log("Update available, installing now");
-                // Install update
-                await Update();
+                if(CheckingForUpdates)
+                    await CheckForUpdate();
             };
             fTimer.AutoReset = true;
             fTimer.Start();
+        }
+
+        private async Task CheckForUpdate()
+        {
+            //Check for update
+            if (!await HasUpdate()) return;
+
+            Log("Update available, installing now");
+            // Install update
+            await Update();
         }
 
         private async Task<bool> HasUpdate()
